@@ -1,0 +1,127 @@
+/* style card */
+.card {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	cursor: pointer;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	box-shadow: 0px 1px 2.8px 1.2px rgba(0, 0, 0, 0.09);
+	transition: all .3s ease-in;
+
+	&:hover {
+		box-shadow: 0px 5px 10.56px 1.44px rgba(68, 190, 217, 0.36);
+		transition: all .3s ease-out;
+	}
+
+	border-radius: 10px;
+
+	&-img-wrapper {
+		max-height: 236px;
+		overflow: hidden;
+		background-color: $card-wrapper;
+		position: relative;
+		display: flex;
+		justify-content: center;
+
+		&-picture {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0;
+		}
+	}
+
+	.trending {
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		z-index: 9999;
+
+		&__link {
+			display: inline-block;
+			background-color: $select-li;
+			color: $base-bg;
+			padding: 10px 5px 10px 5px;
+			border-radius: 2px;
+			text-decoration: none;
+		}
+	}
+
+	.trending-bgc-primary {
+		position: absolute;
+		top: 10px;
+		left: 12px;
+		z-index: 9999;
+
+		.trending__link-primary {
+			display: inline-block;
+			background-color: $primary-color;
+			color: $base-bg;
+			padding: 10px 5px 10px 5px;
+			border-radius: 2px;
+			text-decoration: none;
+		}
+	}
+
+	.card-body {
+		background-color: $base-bg;
+
+		.card-raiting {
+			text-align: center;
+			margin-top: 22px;
+			margin-bottom: 20px;
+
+			&__icon {
+				color: $yellow-raiting;
+				transition: .2s ease-in;
+				cursor: pointer;
+
+				&.marked,
+				&:hover {
+					&::before {
+						content: '\f005';
+					}
+				}
+			}
+		}
+
+		.card__title {
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: -0.01em;
+			color: $section-card;
+			text-align: center;
+			position: relative;
+			transition: .3s;
+
+			&:hover {
+				color: $card-title-h1;
+			}
+
+			margin-bottom: 45px;
+
+			&::before {
+				position: absolute;
+				content: '';
+				width: 80px;
+				height: 1px;
+				background-color: rgba(0, 0, 0, 0.125);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				margin-top: 31px;
+			}
+		}
+	}
+
+	.card-footer {
+		background-color: $base-bg;
+
+		&__price {
+			font-weight: 700;
+			letter-spacing: -0.01em;
+			display: block;
+			text-align: center;
+			padding-bottom: 25px;
+		}
+	}
+}

@@ -1,0 +1,126 @@
+.site-product {
+	background-color: $section-bg;
+	padding-bottom: 87px;
+}
+
+#sidebar-icon {
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.sidebar-block {
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
+	background-color: $base-bg;
+
+	&__wrap {
+		padding: 15px 17px 15px 20px;
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+		align-items: center;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+		&__title {
+			font-weight: 700;
+		}
+
+		.select-block__wrap__box {
+			display: block;
+			border: 1px solid rgba(0, 0, 0, 0.125);
+			position: relative;
+
+			.jq-selectbox {
+				position: relative;
+				display: inline-block;
+				z-index: 10;
+				width: 100px;
+				background-color: $select-bg;
+				box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, .35);
+
+				&::after {
+					content: '\f107';
+					font-family: FontAwesome;
+					position: absolute;
+					top: 25%;
+					right: 0;
+					width: 20%;
+					height: 100%;
+					text-align: center;
+					font-size: 16px;
+					z-index: -1;
+				}
+			}
+
+			.jq-selectbox__select {
+				padding: 10px;
+				font-family: 'Open Sans';
+				cursor: pointer;
+				font-size: 14px;
+
+				&-text {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			.jq-selectbox__dropdown {
+				width: 100%;
+				background-color: $section-bg;
+				padding: 10px;
+				color: $select-li;
+				cursor: pointer;
+			}
+
+			.jq-selectbox li {
+				padding: 10px;
+			}
+		}
+	}
+
+	&__dropdown {
+		padding-top: 14px;
+		padding-bottom: 16px;
+		padding-left: 30px;
+		max-height: 180px;
+		overflow-y: auto;
+
+		.sidebar-block__dropdowm__list+.sidebar-block__dropdowm__list {
+			margin-top: 15px;
+		}
+
+		.sidebar-block__dropdowm__list {
+			font-size: 13px;
+			color: $dropdown-text-color;
+			font-weight: 700;
+			transition: all .3s ease-out;
+			cursor: pointer;
+
+			&:hover {
+				color: $select-list;
+				transition: all .2s linear;
+			}
+		}
+	}
+
+	&__link__btn {
+		display: inline-block;
+		text-decoration: none;
+		text-align: center;
+		color: $select-li;
+		padding-left: 75px;
+		padding-right: 70px;
+		width: 100%;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		border-top: 1px solid rgba(0, 0, 0, 0.125);
+		background-color: $base-bg;
+		font-size: 13px;
+		transition: .2s ease;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}

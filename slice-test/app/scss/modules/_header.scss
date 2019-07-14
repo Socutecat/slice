@@ -1,0 +1,12 @@
+/* Header styles */
+
+.site-header {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	&__inner {
+		&__title {
+			font-family: 'Comfortaa', sans-serif;
+		}
+	}
+	background-color: $section-bg;
+}
